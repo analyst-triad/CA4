@@ -1,5 +1,4 @@
-# CA4
-MLOps Class Task #4
+# MLOps Class Task 4
 
 # Flask Sign-up and Login Application
 
