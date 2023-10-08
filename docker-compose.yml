@@ -1,0 +1,18 @@
+version: "2"
+services:
+  app:
+    image: analysts/ca4_frontend:latest
+    links:
+      - db
+    ports:
+      - "5000:5000"
+
+  db:
+    image: analysts/ca4_backend:latest
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: user_data
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro
