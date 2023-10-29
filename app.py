@@ -28,7 +28,7 @@ def user_exists(username):
         
 @app.route('/')
 def index() -> str:
-    return "Welcome to site"
+    return "Welcome to site. To signup to go /signup, to login to to /login"
 
 # Sign-up route
 @app.route('/signup', methods=['GET', 'POST'])
